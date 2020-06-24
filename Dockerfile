@@ -11,7 +11,8 @@ RUN apt-get update -q && \
     apt-get install -y --no-install-recommends lxde tightvncserver xvfb dbus-x11 x11-utils && \
     apt-get install -y --no-install-recommends xfonts-base xfonts-75dpi xfonts-100dpi && \
     apt-get install -y --no-install-recommends python-pip python-dev python-qt4 && \
-    apt-get install -y --no-install-recommends libssl-dev && \
+    apt-get install -y --no-install-recommends libssl-dev
+
 WORKDIR /root/
 
 RUN mkdir -p /root/.vnc
