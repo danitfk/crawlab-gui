@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  worker:
+    build:
+      context: ./
+    container_name: worker
+    environment:
+      CRAWLAB_SERVER_MASTER: "N"
+    volumes:
+      - "./log:/var/logs/crawlab" # log persistent
+      - "./spiders:/app/spiders"
+    ports:
+      - "5901:5901"
+      - "8000:8000"
